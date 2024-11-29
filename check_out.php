@@ -4,9 +4,8 @@ $conn = new mysqli('localhost', 'root', '', 'food_db');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
-    $address = $_POST['address'];
     $phone = $_POST['phone'];
-    $user_id = $_SESSION['user_id']; // Lưu user_id trong session khi đăng nhập
+    $id = $_SESSION['id']; // Lưu user_id trong session khi đăng nhập
 
     // Tính tổng giá trị đơn hàng
     $total = 0;
@@ -20,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Chèn thông tin đơn hàng vào bảng orders
-    $conn->query("INSERT INTO orders (user_id, name, address, phone, total) VALUES ('$user_id', '$name', '$address', '$phone', '$total')");
+    $conn->query("INSERT INTO orders (id, phone, total) VALUES ('id', '$phone', '$total')");
     $order_id = $conn->insert_id;
 
     // Chèn các sản phẩm trong giỏ hàng vào bảng order_items
@@ -37,7 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     unset($_SESSION['cart']);
 
     // Chuyển hướng đến trang thành công
-    header("Location: order_success.php");
+    $_SESSION['order_id'] = $order_id;
+    header("Location: success_order.php");
     exit();
 }
 ?>
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <class id="dathang1">
     <div id="thongtindathang">
     <h1>Đặt hàng</h1>
-    <form method="post" action="">
+    <form method="post" action="success_order.php">
         <label>Họ tên:</label>
         <input type="text" name="name" required>
         <br>
@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label>Số điện thoại:</label>
         <input type="text" name="phone" required>
         <br>
-        <a href="order_success.php"><button type="submit">Đặt hàng</button></a>
+        <button type="submit">Đặt hàng</button>
     </form>
     </div>
 </class>

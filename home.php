@@ -20,7 +20,7 @@ session_start(); if (!isset($_SESSION['cart'])) {
 <body>
     <div id="wrapper">
         <div id="header">
-            <a href="" class="logo"><img src="images/logo.png" alt=""></a>
+            <a href="home.php" class="logo"><img src="images/logo.png" alt="logo goodfood"></a>
             <div id="menu">
                 <div class="item"><a href="home.php">Trang chủ</a></div>
                 <div class="item"><a href="about.php">Giới thiệu</a></div>
@@ -85,7 +85,7 @@ session_start(); if (!isset($_SESSION['cart'])) {
         </div>
         <div id="footer">
             <div class="box">
-                <div class="logo"><img src="images/logo.png" alt=""></div>
+                <a href="home.php"><div class="logo"><img src="images/logo.png" alt="logo goodfood"></div></a>
                 <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</p>
             </div>
             <div class="box">

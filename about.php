@@ -11,7 +11,7 @@
 <body>
     <div id="wrapper">
         <div id="header">
-            <a href="" class="logo"><img src="images/logo.png" alt=""></a>
+            <a href="home.php" class="logo"><img src="images/logo.png" alt=""></a>
             <div id="menu">
                 <div class="item"><a href="home.php">Trang chủ</a></div>
                 <div class="item"><a href="about.php">Giới thiệu</a></div>
@@ -19,7 +19,7 @@
                 <div class="item"><a href="contact.php">Liên hệ</a></div>
             </div>
             <div id="actions">
-                <div class="item"><a href=""><img src="images/user.png" alt=""></a></div>
+                <div class="item"><a href="user.php"><img src="images/user.png" alt=""></a></div>
                 <div class="item"><a href="cart.php"><img src="images/grocery-store.png" alt=""></a></div>
             </div>
         </div>

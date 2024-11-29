@@ -13,13 +13,13 @@ session_start();
 <div id="header">
 <a href="" class="logo"><img src="images/logo.png" alt=""></a>
             <div id="menu">
-                <div class="item"><a href="">Trang chủ</a></div>
-                <div class="item"><a href="">Giới thiệu</a></div>
-                <div class="item"><a href="">Sản phẩm</a></div>
-                <div class="item"><a href="">Liên hệ</a></div>
+            <div class="item"><a href="home.php">Trang chủ</a></div>
+                <div class="item"><a href="about.php">Giới thiệu</a></div>
+                <div class="item"><a href="product.php">Sản phẩm</a></div>
+                <div class="item"><a href="contact.php">Liên hệ</a></div>
             </div>
             <div id="actions">
-                <div class="item"><a href="login.php"><img src="images/user.png" alt=""></a></div>
+                <div class="item"><a href="user.php"><img src="images/user.png" alt=""></a></div>
                 <div class="item"><a href="cart.php"><img src="images/grocery-store.png" alt=""></a></div>
             </div>
         </div>
@@ -28,7 +28,7 @@ session_start();
         <div class="login1">
             <div class="login1a">
                 <h3> Đăng nhập</h3>
-                <form method="post" action="dangnhap.php">
+                <form method="post" action="process_login.php">
                 <input type="email" name="email" placeholder="Email/Số điện thoại/Tên đăng nhập" required >
                 <br>
                 <input type="password" name="password" placeholder="Mật khẩu" required>
@@ -63,10 +63,9 @@ session_start();
             </div>
             <div class="box">
                 <h3>LIÊN HỆ</h3>
-                <form action="">
-                    <input type="text" placeholder="Địa chỉ email">
-                    <button>Nhận tin</button>
-                </form>
+                <p>Địa chỉ: 123 Đường Khúc Thừa Dụ, Quận Thủ Đức, TP. Hồ Chí Minh</p>
+                <p>Email: starfruit_weloveyou@sf6shop.com | Hotline: 1900-888-386</p>
+                <p>© 2024 GOODFOOD. Được phát triển bởi đội ngũ SF6-Starfruit.</p>
             </div>
         </div>
 </body>

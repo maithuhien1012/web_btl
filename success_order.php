@@ -2,6 +2,10 @@
 session_start();
 $conn = new mysqli('localhost', 'root', '', 'food_db');
 
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 // Kiểm tra xem order_id có tồn tại trong session không
 if (isset($_SESSION['order_id'])) {
     $order_id = $_SESSION['order_id'];
@@ -23,12 +27,12 @@ if (isset($_SESSION['order_id'])) {
         }
     } else {
         // Nếu không tìm thấy đơn hàng, chuyển hướng về trang chủ
-        header("Location: index.php");
+        header("Location: home.php");
         exit();
     }
 } else {
     // Nếu không có order_id trong session, chuyển hướng về trang chủ
-    header("Location: index.php");
+    header("Location: home.php");
     exit();
 }
 ?>
@@ -69,7 +73,7 @@ if (isset($_SESSION['order_id'])) {
     echo number_format($total, 0, ',', '.') . ' VNĐ';
 ?></p>
 
-<p><a href="index.php">Quay lại trang chủ</a></p>
+<p><a href="home.php">Quay lại trang chủ</a></p>
 
 </body>
 </html>
@@ -78,4 +82,3 @@ if (isset($_SESSION['order_id'])) {
 // Sau khi hiển thị trang thành công, có thể xóa order_id khỏi session (tuỳ chọn)
 unset($_SESSION['order_id']);
 ?>
-

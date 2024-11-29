@@ -1,13 +1,19 @@
 <?php
 session_start();
-?>
 
+// Kiểm tra nếu chưa đăng nhập
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login1.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng ký</title>
-    <link rel="stylesheet" href="css/login.css">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="css/user.css">
 </head>
 <body>
 <div id="header">
@@ -22,31 +28,11 @@ session_start();
                 <div class="item"><a href="user.php"><img src="images/user.png" alt=""></a></div>
                 <div class="item"><a href="cart.php"><img src="images/grocery-store.png" alt=""></a></div>
             </div>
-        </div>
-    <div class="all">
-    <a href="" class="logo"><img src="images/logo.png" style="background-color:dimgray; border-radius: 5px; width: 250px; height:250px; border-radius: 200px;"></a>
-        <div class="login1">
-            <div class="login1a">
-                <form method="post" action="process_register.php">
-                <h3>Đăng ký</h3><hr>
-                
-                <input type="email" name="email" placeholder="Email/Số điện thoại/Tên đăng nhập" required>
-                <br>
-                <input type="password" name="password" placeholder="Mật khẩu"required>
-                <br>
-                <input type="name" name="name" placeholder="Tên người nhận " required>
-                <br>
-                <input type="country" name="country" placeholder="Địa chỉ nhận hàng" required>
-                <br>
-                <input type="phone" name="phone" placeholder="Số điện thoại nhận hàng" required>
-                <button type="submit" name="dangky" style="width:260px; height:30px; background-color:sienna; border-radius: 5px; font-size: 20px; margin-top:50px">Đăng ký</button>
-                <p style="line-height: 5px;"> Chào mừng bạn đến với Good Food</p>
+</div>
+<h1>Xin chào, <?php echo htmlspecialchars($_SESSION['user_name']); ?>!</h1>
+<p>Email: <?php echo htmlspecialchars($_SESSION['user_email']); ?></p>
 
-                </form>
-            </div>
-        </div>
-    </div>
-    <div id="footer">
+<div id="footer">
             <div class="box">
                 <div class="logo"><img src="images/logo.png" alt=""></div>
                 <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</p>
@@ -73,6 +59,7 @@ session_start();
                 <p>Địa chỉ: 123 Đường Khúc Thừa Dụ, Quận Thủ Đức, TP. Hồ Chí Minh</p>
                 <p>Email: starfruit_weloveyou@sf6shop.com | Hotline: 1900-888-386</p>
                 <p>© 2024 GOODFOOD. Được phát triển bởi đội ngũ SF6-Starfruit.</p>
+                </form>
             </div>
         </div>
 </body>

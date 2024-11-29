@@ -28,7 +28,7 @@ session_start(); if (!isset($_SESSION['cart'])) {
                 <div class="item"><a href="contact.php">Liên hệ</a></div>
             </div>
             <div id="actions">
-                <div class="item"><a href="login1.php"><img src="images/user.png" alt=""></a></div>
+                <div class="item"><a href="user.php"><img src="images/user.png" alt=""></a></div>
                 <div class="item"><a href="cart.php"><img src="images/grocery-store.png" alt=""></a></div>
             </div>
         </div>

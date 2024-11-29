@@ -25,17 +25,25 @@
 
 }
     .login1a{
-        line-height: 60px;
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 45px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
+        h3{
+            line-height: 10px;
+        }
+        
     }
-    input[type="email"],input[type="password"]{
+    input[type="email"],input[type="password"],input[type="phone"], input[type="country"],input[type="name"]{
         width: 250px;
         height: 25px;
+        position: absolute;
     }
-    input[type="email"],input[type="password"]:focus {
+    input[type="email"],input[type="password"],input[type="phone"], input[type="country"],input[type="name"]:focus {
         border-color: black; /* Thay đổi màu viền */
-        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Hiệu ứng đổ bóng */
+        box-shadow: 0 0 8px rgba(171, 62, 62, 0.5); /* Hiệu ứng đổ bóng */
         background-color: #f9f9f9;}
     p{
         font-size: 14px;
@@ -63,9 +71,14 @@
 
 #menu .item a {
     color:#626A67;
-    text-decoration: none;  
+    text-decoration: none;
+    transition: all 0.3s ease;  
 }
+#menu .item a:hover{
+    color:#1d1a1a;
+    font-weight:bolder;
 
+}
 
 #actions {
     display: flex;

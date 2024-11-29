@@ -87,7 +87,7 @@ if (!$result) {
                 </tr>
         </table>
         <div id="dathang">
-            <a href="checkout.php">Đặt hàng</a>
+            <a href="check_out.php">Đặt hàng</a>
         </div>
 </div>
  <div id="footer">
