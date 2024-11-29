@@ -12,7 +12,7 @@ $password = $_POST['password'];
 $result = $conn->query("SELECT * FROM users WHERE email = '$email' AND password = '$password'");
 if ($result->num_rows > 0) {
     $_SESSION['user'] = $email;
-    header("Location: index.php");
+    header("Location: home.php");
     exit();
 } else {
     echo "Sai thông tin đăng nhập";

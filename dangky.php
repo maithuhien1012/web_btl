@@ -11,6 +11,6 @@ $password = $_POST['password'];
 
 $conn->query("INSERT INTO users (email, password) VALUES ('$email', '$password')");
 $_SESSION['user'] = $email;
-header("Location: index.php");
+header("Location: home.php");
 exit();
 ?>

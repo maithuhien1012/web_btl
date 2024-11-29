@@ -1,0 +1,96 @@
+#about-section {
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px; /* Thêm khoảng cách bên phải của ảnh */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #666;
+    margin: 20px 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-section {
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #666;
+    margin: 20px 0;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px; /* Thêm khoảng cách bên phải của ảnh */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Invert layout for odd about sections */
+#about-section-2 .about-content {
+    flex-direction: row-reverse; /* Đảo ngược hướng xếp của ảnh và chữ */
+}
+
+
+

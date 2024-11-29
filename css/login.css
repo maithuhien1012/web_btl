@@ -1,65 +1,126 @@
-/* style.css */
-
-/* Định dạng tổng quát */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+.all{
+    width: 82,5%;
+    background-image :url("https://cdn.buffetposeidon.com/app/media/uploaded-files/150824-phong-cach-am-thuc-trung-co-c%E1%BB%A7a-Phap-buffet-poseidon-1.jpg");
+    height: 500px;
     display: flex;
+    padding:0px 133px;
+    position:relative;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+    box-shadow: 7px 7px 7px;
+    border-radius: 3px;
 
-.login-container {
+    }
+    .login1{
+        border: 2px black none;
+        border-radius: 5px;
+        width: 300px;
+        height: 350px;
+        background-color: white;
+        display:  flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 600px;
+        box-shadow: 5px 5px 5px whitesmoke;
+
+}
+    .login1a{
+        line-height: 60px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    input[type="email"],input[type="password"]{
+        width: 250px;
+        height: 25px;
+    }
+    input[type="email"],input[type="password"]:focus {
+        border-color: black; /* Thay đổi màu viền */
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Hiệu ứng đổ bóng */
+        background-color: #f9f9f9;}
+    p{
+        font-size: 14px;
+        text-align: center;
+    }
+#header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 82,5%;
+    padding:0px 20px;
+    margin-top:10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: center;    
 }
 
-.login-box, .register-box {
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
+#menu {
+    list-style:none;
+    display: flex;
+}
+
+#menu .item {
+    margin:0px 25px;
+}
+
+#menu .item a {
+    color:#626A67;
+    text-decoration: none;  
+}
+
+
+#actions {
+    display: flex;
+}
+
+#actions .item {
+    margin-left:22px;
+}
+#footer {
+    width: 82,5%;
+    background:rgb(0,0,0,0.79);
+    height: 250px;
+    margin-top:10px;
+    padding:0px 63px;
+    padding-top:57px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 7px 7px 7px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
 }
 
-/* Tiêu đề */
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
+#footer .box {
+    width: 250px;
+    color:#fff;
 }
 
-/* Nhãn */
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+#footer .box .quick-menu {
+    margin-top:40px;
+
 }
 
-/* Các trường đầu vào */
-input[type="email"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+#footer .box .quick-menu .item{
+    margin-bottom:12px;
+
+}
+#footer .box .quick-menu ,.item a{
+    color:#fff;
+    text-decoration: none;
 }
 
-/* Nút */
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+#footer .box form input {
+    width: 294px;
+    height: 42px;
+    background:transparent;
+    padding-left:20px;
+    color:#fff;
+    margin-top:30px;
 }
 
-button:hover {
-    background-color: #218838;
+#footer .box form button {
+    background:#362f2f;
+    box-shadow: 5px 5px 4px rgba(0,0,0.25);
+    width: 163px;
+    height: 38px;
+    margin-top:29px;
+    color:#fff;
 }
