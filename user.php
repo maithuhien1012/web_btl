@@ -3,7 +3,7 @@ session_start();
 
 // Kiểm tra nếu chưa đăng nhập
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login1.php");
+    header("Location: login.php");
     exit();
 }
 ?>
@@ -19,7 +19,7 @@ if (!isset($_SESSION['user_id'])) {
 <div id="header">
 <a href="" class="logo"><img src="images/logo.png" alt=""></a>
             <div id="menu">
-                <div class="item"><a href="home.php">Trang chủ</a></div>
+                <div class="item"><a href="home2.php">Trang chủ</a></div>
                 <div class="item"><a href="about.php">Giới thiệu</a></div>
                 <div class="item"><a href="product.php">Sản phẩm</a></div>
                 <div class="item"><a href="contact.php">Liên hệ</a></div>
@@ -29,9 +29,19 @@ if (!isset($_SESSION['user_id'])) {
                 <div class="item"><a href="cart.php"><img src="images/grocery-store.png" alt=""></a></div>
             </div>
 </div>
-<h1>Xin chào, <?php echo htmlspecialchars($_SESSION['user_name']); ?>!</h1>
-<p>Email: <?php echo htmlspecialchars($_SESSION['user_email']); ?></p>
-
+<hr>
+<div class="form">
+<div class="form_user">
+<h3>Thông tin của bạn</h3>
+    <p>Họ tên:  <?php echo htmlspecialchars($_SESSION['user_name']); ?> </p>
+    <p>Email: <?php echo htmlspecialchars($_SESSION['user_email']); ?></p>
+    <p>Địa chỉ: <?php echo htmlspecialchars($_SESSION['user_country']); ?></p>
+    <p>Số điện thoại: <?php echo htmlspecialchars($_SESSION['user_phone']); ?></p>
+    <form action="logout.php" method="post">
+        <button type="submit" style="border-radius:5px" class="logout-btn">Đăng xuất</button>
+    </form>
+</div>
+</div>
 <div id="footer">
             <div class="box">
                 <div class="logo"><img src="images/logo.png" alt=""></div>
@@ -41,26 +51,26 @@ if (!isset($_SESSION['user_id'])) {
                 <h3>NỘI DUNG</h3>
                 <ul class="quick-menu">
                 <div class="item">
-                        <a href="">Trang chủ</a>
+                        <a href="home2.php">Trang chủ</a>
                     </div>
                     <div class="item">
-                        <a href="">Sản phẩm</a>
+                        <a href="about.php">Giới thiệu</a>
                     </div>
                     <div class="item">
-                        <a href="">Blog</a>
+                        <a href="product.php">Sản phẩm</a>
                     </div>
                     <div class="item">
-                        <a href="">Liên hệ</a>
-                    </div>
+                        <a href="contact.php">Liên hệ</a>
+                </div>
                 </ul>
             </div>
             <div class="box">
-                <h3>LIÊN HỆ</h3>
-                <p>Địa chỉ: 123 Đường Khúc Thừa Dụ, Quận Thủ Đức, TP. Hồ Chí Minh</p>
+            <h3>LIÊN HỆ</h3>
                 <p>Email: starfruit_weloveyou@sf6shop.com | Hotline: 1900-888-386</p>
-                <p>© 2024 GOODFOOD. Được phát triển bởi đội ngũ SF6-Starfruit.</p>
-                </form>
+                <p>© 2024 GOODFOOD. Được phát triển bởi đội ngũ SF6-Starfruit.</p> 
             </div>
         </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

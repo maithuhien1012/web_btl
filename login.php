@@ -6,14 +6,14 @@ session_start();
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng ký</title>
+    <title>Đăng nhập</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 <div id="header">
 <a href="" class="logo"><img src="images/logo.png" alt=""></a>
             <div id="menu">
-                <div class="item"><a href="home.php">Trang chủ</a></div>
+            <div class="item"><a href="home.php">Trang chủ</a></div>
                 <div class="item"><a href="about.php">Giới thiệu</a></div>
                 <div class="item"><a href="product.php">Sản phẩm</a></div>
                 <div class="item"><a href="contact.php">Liên hệ</a></div>
@@ -24,24 +24,17 @@ session_start();
             </div>
         </div>
     <div class="all">
-    <a href="" class="logo"><img src="images/logo.png" style="background-color:dimgray; border-radius: 5px; width: 250px; height:250px; border-radius: 200px;"></a>
+    <a href="" class="logo" ><img src="images/logo.png" style="background-color:dimgray; border-radius: 5px; width: 250px; height:250px; border-radius: 200px;"></a>
         <div class="login1">
             <div class="login1a">
-                <form method="post" action="process_register.php">
-                <h3>Đăng ký</h3><hr>
-                
-                <input type="email" name="email" placeholder="Email/Số điện thoại/Tên đăng nhập" required>
+                <h3> Đăng nhập</h3>
+                <form method="post" action="process_login.php">
+                <input type="email" name="email" placeholder="Email/Số điện thoại/Tên đăng nhập" required >
                 <br>
-                <input type="password" name="password" placeholder="Mật khẩu"required>
+                <input type="password" name="password" placeholder="Mật khẩu" required>
                 <br>
-                <input type="name" name="name" placeholder="Tên người nhận " required>
-                <br>
-                <input type="country" name="country" placeholder="Địa chỉ nhận hàng" required>
-                <br>
-                <input type="phone" name="phone" placeholder="Số điện thoại nhận hàng" required>
-                <button type="submit" name="dangky" style="width:260px; height:30px; background-color:sienna; border-radius: 5px; font-size: 20px; margin-top:50px">Đăng ký</button>
-                <p style="line-height: 5px;"> Chào mừng bạn đến với Good Food</p>
-
+                <button type="submit" name="dangnhap" style="width:260px; height:30px; background-color:sienna; border-radius: 5px; font-size:20px">Đăng nhập</button>
+                <p>Bạn chưa có tài khoản? | <a href="register.php" style="text-decoration: none; font-size: 16px; color: red; " > Đăng ký </a></p>
                 </form>
             </div>
         </div>
@@ -55,17 +48,17 @@ session_start();
                 <h3>NỘI DUNG</h3>
                 <ul class="quick-menu">
                 <div class="item">
-                        <a href="">Trang chủ</a>
+                        <a href="home.php">Trang chủ</a>
                     </div>
                     <div class="item">
-                        <a href="">Sản phẩm</a>
+                        <a href="about.php">Giới thiệu</a>
                     </div>
                     <div class="item">
-                        <a href="">Blog</a>
+                        <a href="product.php">Sản phẩm</a>
                     </div>
                     <div class="item">
-                        <a href="">Liên hệ</a>
-                    </div>
+                        <a href="contact.php">Liên hệ</a>
+                </div>
                 </ul>
             </div>
             <div class="box">

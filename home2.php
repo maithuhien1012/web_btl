@@ -20,15 +20,15 @@ session_start(); if (!isset($_SESSION['cart'])) {
 <body>
     <div id="wrapper">
         <div id="header">
-            <a href="home.php" class="logo"><img src="images/logo.png" alt=""></a>
+            <a href="css/home.php" class="logo"><img src="images/logo.png" alt=""></a>
             <div id="menu">
-                <div class="item"><a href="home.php">Trang chủ</a></div>
+                <div class="item"><a href="home2.php">Trang chủ</a></div>
                 <div class="item"><a href="about.php">Giới thiệu</a></div>
                 <div class="item"><a href="product.php">Sản phẩm</a></div>
                 <div class="item"><a href="contact.php">Liên hệ</a></div>
             </div>
             <div id="actions">
-                <div class="item"><a href="login.php"><img src="images/user.png" alt=""></a></div>
+                <div class="item"><a href="user.php"><img src="images/user.png" alt=""></a></div>
                 <div class="item"><a href="cart.php"><img src="images/grocery-store.png" alt=""></a></div>
             </div>
         </div>
@@ -62,7 +62,7 @@ session_start(); if (!isset($_SESSION['cart'])) {
             <div id="comment-body">
                 <div class="prev"><a href="#"><img src="images/left.png" alt=""></a></div>
                 <ul id="list-comment">
-                    <li class="item">
+                <li class="item">
                         <div class="avatar"><img src="images/woman.png" alt=""></div>
                         <div class="name">Mai Thu Hiền</div>
                         <div class="text"><p>Một nơi được thiết kế độc đáo để thưởng thức những món ăn ngon bên người mình yêu. Ánh mắt của các bạn nhân viên thật lấp lánh khi họ giới thiệu thành phần của món ăn. Thật tuyệt vời 🥰 Chúng tôi cảm thấy được yêu thương và quan tâm rất nhiều, muốn trở lại đây lần sau và lần sau nữa. Đây là nhà hàng thực vật tốt nhất ở Việt Nam, GoodFood.</p></div>

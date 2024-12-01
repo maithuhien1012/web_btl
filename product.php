@@ -22,7 +22,7 @@ session_start(); if (!isset($_SESSION['cart'])) {
         <div id="header">
             <a href="" class="logo"><img src="images/logo.png" alt=""></a>
             <div id="menu">
-                <div class="item"><a href="home.php">Trang chủ</a></div>
+                <div class="item"><a href="home2.php">Trang chủ</a></div>
                 <div class="item"><a href="about.php">Giới thiệu</a></div>
                 <div class="item"><a href="product.php">Sản phẩm</a></div>
                 <div class="item"><a href="contact.php">Liên hệ</a></div>
@@ -65,7 +65,7 @@ session_start(); if (!isset($_SESSION['cart'])) {
                 <h3>NỘI DUNG</h3>
                 <ul class="quick-menu">
                 <div class="item">
-                        <a href="home.php">Trang chủ</a>
+                        <a href="home2.php">Trang chủ</a>
                     </div>
                     <div class="item">
                         <a href="about.php">Giới thiệu</a>

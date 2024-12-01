@@ -1,0 +1,213 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    top: 0; 
+    left: 0;
+    background-color: antiquewhite;
+    z-index: 1000; /* Ensure it's above other elements */
+    margin-bottom: 100px;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+}
+
+#menu .item {
+    margin: 0px 25px;
+}
+
+#menu .item a {
+    color: #626A67;
+    text-decoration: none;
+}
+
+#actions {
+    display: flex;
+}
+
+#actions .item {
+    margin-left: 22px;
+}
+
+#footer {
+    width: 100%;
+    background: rgb(0, 0, 0, 0.79);
+    height: 322px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#footer .box {
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #444;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    vertical-align: top;
+}
+
+#footer .box .logo img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+#footer .box p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#footer .box .quick-menu {
+    margin-top: 20px;
+}
+
+#footer .box .quick-menu .item {
+    margin-bottom: 12px;
+}
+
+#footer .box .quick-menu .item a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#footer .box .quick-menu .item a:hover {
+    color: #f8a5c2;
+}
+
+@media screen and (max-width: 768px) {
+    #footer .box {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+#footer .box p:last-child {
+    font-size: 12px;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+.xuatdon{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin-top: 130px;
+            padding: 0;
+            margin-bottom: 0px;
+            background-color: #444;
+            background-image:  url('https://cdn.buffetposeidon.com/app/media/uploaded-files/150824-phong-cach-am-thuc-trung-co-c%E1%BB%A7a-Phap-buffet-poseidon-1.jpg');
+        }
+      
+        .xuatdon h1{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            color: crimson;
+            text-align: center;
+        }
+
+        .xuatdon  h3 {
+            padding-top: 20px;
+            color: white;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .thongtin{
+            background-color: rgba(0, 0, 0, 0.5) ;
+            border-radius: 10px;
+            border: 2px solid #626A67;
+            width: 60%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            padding: 20px;
+        } 
+
+        .xuatdon p {
+            font-size: 16px;
+            color:bisque;
+            text-align: center;
+        }
+
+        .xuatdon ul {
+            list-style-type: none;
+            padding: 0;
+            color:#f2e6e6;
+            text-align: center;
+        }
+
+        .xuatdon table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        .xuatdon table th, table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .xuatdon table th {
+            background-color:crimson;
+            color: white;
+            font-weight: bold;
+        }
+        .xuatdon table tr:nth-child(n+2) { /* Áp dụng cho các hàng từ hàng thứ 2 trở đi */
+            background-color:  rgba(0, 0, 0, 0.5);  
+            color: white; /* Chữ màu trắng */
+        }
+
+
+
+            .xuatdon table th, table td {
+                padding: 10px;
+                text-align: center;
+                border: 2px solid #ddd; 
+             }
+
+
+
+        a.nha {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color:black;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        a.nha:hover {
+            background-color:chocolate;
+        }
+
+        .center {
+            text-align: center;
+        }

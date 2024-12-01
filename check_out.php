@@ -2,45 +2,9 @@
 session_start();
 $conn = new mysqli('localhost', 'root', '', 'food_db');
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $id = $_SESSION['id']; // Lưu user_id trong session khi đăng nhập
 
-    // Tính tổng giá trị đơn hàng
-    $total = 0;
-    foreach ($_SESSION['cart'] as $product_id => $quantity) {
-        $result = $conn->query("SELECT price FROM products WHERE id = $product_id");
-        $product = $result->fetch_assoc();
-        $price = $product['price'];
-        
-        // Cộng thêm tổng tiền của sản phẩm (giá * số lượng)
-        $total += $price * $quantity;
-    }
-
-    // Chèn thông tin đơn hàng vào bảng orders
-    $conn->query("INSERT INTO orders (id, phone, total) VALUES ('id', '$phone', '$total')");
-    $order_id = $conn->insert_id;
-
-    // Chèn các sản phẩm trong giỏ hàng vào bảng order_items
-    foreach ($_SESSION['cart'] as $product_id => $quantity) {
-        $result = $conn->query("SELECT price FROM products WHERE id = $product_id");
-        $product = $result->fetch_assoc();
-        $price = $product['price'];
-
-        // Chèn sản phẩm vào bảng order_items
-        $conn->query("INSERT INTO order_items (order_id, product_id, quantity, price) VALUES ('$order_id', '$product_id', '$quantity', '$price')");
-    }
-
-    // Xóa giỏ hàng sau khi đặt hàng
-    unset($_SESSION['cart']);
-
-    // Chuyển hướng đến trang thành công
-    $_SESSION['order_id'] = $order_id;
-    header("Location: success_order.php");
-    exit();
-}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="vi">
@@ -50,24 +14,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="css/checkout.css">
 </head>
 <body>
+    
         <div id="header">
             <a href="" class="logo"><img src="images/logo.png" alt=""></a>
             <div id="menu">
-                <div class="item"><a href="home.php">Trang chủ</a></div>
+                <div class="item"><a href="home2.php">Trang chủ</a></div>
                 <div class="item"><a href="about.php">Giới thiệu</a></div>
                 <div class="item"><a href="product.php">Sản phẩm</a></div>
-                <div class="item"><a href="contact.php">Liên hệ</a></div>
+                <div class="item"><a href="actions.php">Liên hệ</a></div>
             </div>
           <div id="actions">
  
-                  <div class="item"><a href="login1.php"><img src="images/user.png" alt=""></a></div>
+                  <div class="item"><a href="user.php"><img src="images/user.png" alt=""></a></div>
                   <div class="item"><a href="cart.php"><img src="images/grocery-store.png" alt=""></a></div>
             </div>
         </div>
 <class id="dathang1">
     <div id="thongtindathang">
     <h1>Đặt hàng</h1>
-    <form method="post" action="success_order.php">
+    <form method="POST" action="order_success.php">
         <label>Họ tên:</label>
         <input type="text" name="name" required>
         <br>
@@ -77,6 +42,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label>Số điện thoại:</label>
         <input type="text" name="phone" required>
         <br>
+        
+        <!-- Lấy thời gian đặt hàng hiện tại -->
+        <?php date_default_timezone_set('Asia/Ho_Chi_Minh'); $order_time = date('d-m-Y H:i:s'); ?>
+        <input type="hidden" name="order_time" value="<?php echo $order_time; ?>">
+
         <button type="submit">Đặt hàng</button>
     </form>
     </div>
@@ -89,17 +59,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="box">
                 <h3>NỘI DUNG</h3>
                 <ul class="quick-menu">
-                    <div class="item">
-                        <a href="home.php">Trang chủ</a>
-                    </div>
-                    <div class="item">
-                        <a href="about.php">Giới thiệu</a>
+                <div class="item">
+                        <a href="index.php">Trang chủ</a>
                     </div>
                     <div class="item">
                         <a href="product.php">Sản phẩm</a>
                     </div>
                     <div class="item">
-                        <a href="contact.php">Liên hệ</a>
+                        <a href="about.php">Giới thiệu</a>
+                    </div>
+                    <div class="item">
+                        <a href="actions.php">Liên hệ</a>
                     </div>
                 </ul>
             </div>
@@ -111,6 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <p>© 2024 GOODFOOD. Được phát triển bởi đội ngũ SF6-Starfruit.</p> 
              
    </div>
-      
+
 </body>
 </html>
